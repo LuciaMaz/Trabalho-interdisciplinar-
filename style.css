@@ -1,159 +1,99 @@
-
-  
-@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 *{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box; 
-   font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Georgia, serif;
 }
-section{
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    padding: 100px;
-    background: rgb(13 12 15);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    overflow: hidden;
-}
-.circle{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #a55c0a;
-    clip-path: circle(50% at bottom right);
-}
-header{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header .logo{
-  position: relative;
-  max-width: 150px;
-}
-header .navegation ul{
-  position: relative;
-  display: flex;
-}
-header .navegation li{
-  list-style: none;
-}
-header .navegation li a{
-  color: #fff;
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 30px;
-  margin-left: 100px;
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: inline-block;
-  margin-top: 50px;
-  padding: 10px 25px;
-  background: #a55c0a;
-  color: #0c0c0c;
-  font-weight: 300;
-  text-decoration: none;
-  letter-spacing: 1px;
-  border-radius: 40px;
-  transition: 0.3 ease-in-out;
-  
-  font-family: "Black Ops One", system-ui;
-  font-weight: 400;
-  font-style: normal;
+body{
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(to bottom,#ff5a1f,#000);
 }
+
 .container{
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.container .text{
-  position: relative;
-  max-width: 600px;
-  margin-right: 20px;
-}
-.container .text h2{
-  color: #fff;
-  font-size: 2em;
-  margin-bottom: 10px;
-  line-height: 2.5em;
-  font-weight: 700;
-}
-.container .text h2 span{
-  font-size: 3.5em;
-  color: #a55c0a;
-}
-.container .text p{
-  color: #fff;
-  font-family: "Black Ops One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
-}
-.container .text a{
-  display: inline-block;
-  margin-top: 50px;
-  padding: 10px 25px;
-  background: #a55c0a;
-  color: #fff;
-  font-weight: 500;
-  text-decoration: none;
-  letter-spacing: 1px;
-  border-radius: 40px;
-  transition: 0.3 ease-in-out;
-}
-.container .text a:hover{
-  transform: translateY(-10px);
-}
-.icons{
-  position: absolute;
-  bottom: 40px;
-  left: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.icons li{
-  list-style: none;
-}
-.icons li a{
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: rgb(13, 12, 15);
-  margin-left: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease-in-out;
-  position: relative;
-}
-.icons li a:hover{
-  background: #a55c0a;
-  transform: translateY(-10px);
-}
-.boxImg{
-  position: relative;
-  right: 0;
-  bottom: -50px;
-}
-  
-.boxImg img{
-  width: 300px;
+    text-align:center;
 }
 
+.container img{
+    width:200px;
+    margin-bottom:20px;
+    border-radius:50%;
+}
+.logo{
+    width:90px;
+    margin-bottom:10px;
+}
 
+h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.texto{
+    font-size:15px;
+    margin-bottom:30px;
+}
+
+h2{
+    margin-bottom:20px;
+    font-weight:normal;
+}
+
+.opcoes{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-bottom:35px;
+}
+
+.card{
+    width:150px;
+    background:#d5b7a4;
+    border-radius:10px;
+    padding:12px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    cursor:pointer;
+}
+
+.card img{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:white;
+    border:3px solid #000;
+    object-fit:cover;
+    margin-bottom:10px;
+}
+
+.card a{
+    text-decoration:none;
+    color:black;
+    font-size:26px;
+}
+
+button{
+    background:#2b170f;
+    color:white;
+    border:none;
+    padding:10px 35px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#44261a;
+}

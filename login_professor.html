@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pedagógico</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <img src="imagem-de-fundo-tela-de-senha.avif" alt="Fundo" class="background">
+
+    <header class="topo">
+        <img src="imagem logo alberto.png" alt="Logo" class="logo">
+        <div class="titulo">
+            <h1>Colégio Estadual Alberto de Carvalho</h1>
+            <p>Portfólios - Téc desenvolvimento de sistemas</p>
+        </div>
+    </header>
+
+    <main class="login">
+        <h2>BEM-VINDO (A)</h2>
+        <p>Acesso para o pedagógico</p>
+        <p id="cadastro"><a href="cadastro2.html">não tenho uma conta</a></p>
+
+        <form id="formLoginProfessor">
+            <label for="usuario">Login:</label>
+            <input type="text" id="usuario" placeholder="Escreva aqui..." required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Escreva aqui..." required>
+        
+            <button type="submit">Acessar</button>
+        </form>
+    </main>
+
+    <script src="frontend-login-professor.js"></script>
+</body>
+</html>

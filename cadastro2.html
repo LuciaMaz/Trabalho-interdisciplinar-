@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Pedagógico</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+
+    <img src="imagem-de-fundo-tela-de-senha.avif" alt="Fundo" class="background">
+
+    <header class="topo">
+        <img src="imagem logo alberto.png" alt="Logo" class="logo">
+        <div class="titulo">
+            <h1>Colégio Estadual Alberto de Carvalho</h1>
+            <p>Portfólios - Téc desenvolvimento de sistemas</p>
+        </div>
+    </header>
+
+    <main class="cadastro-container">
+        <h2>CADASTRO PEDAGÓGICO</h2>
+        <p>Área de registro para coordenadores e professores</p>
+
+        <form id="formCadastroPedagogico">
+            <label for="usuario">Login Institucional:</label>
+            <input type="text" id="usuario" placeholder="Ex: prof.nome" required>
+
+            <label for="senha">Senha de Acesso:</label>
+            <input type="password" id="senha" placeholder="Crie uma senha forte..." required>
+        
+            <button type="submit">Registrar</button>
+        </form>
+
+        <p id="voltar-login"><a href="login_professor.html">Já tenho uma conta</a></p>
+    </main>
+
+    <script src="frontend-cadastro2.js"></script>
+</body>
+</html>

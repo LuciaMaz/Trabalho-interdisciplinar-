@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Alunos</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+
+    <img src="imagem-de-fundo-tela-de-senha.avif" alt="Fundo" class="background">
+
+    <header class="topo">
+        <img src="imagem logo alberto.png" alt="Logo" class="logo">
+        <div class="titulo">
+            <h1>Colégio Estadual Alberto de Carvalho</h1>
+            <p>Portfólios - Téc desenvolvimento de sistemas</p>
+        </div>
+    </header>
+
+    <main class="cadastro-container">
+        <h2>CRIAR CONTA</h2>
+        <p>Preencha os campos abaixo para se cadastrar</p>
+
+        <form id="formCadastro">
+            <label for="usuario">Escolha um Login:</label>
+            <input type="text" id="usuario" placeholder="Ex: nome.sobrenome" required>
+
+            <label for="senha">Escolha uma Senha:</label>
+            <input type="password" id="senha" placeholder="Crie uma senha..." required>
+        
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <p id="voltar-login"><a href="login_estudante.html">Já tenho uma conta</a></p>
+    </main>
+
+    <script src="frontend-cadastro.js"></script>
+</body>
+</html>

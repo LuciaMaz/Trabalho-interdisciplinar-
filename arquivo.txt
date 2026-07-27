@@ -1,0 +1,1 @@
+para ligar a conexão do site para o banco de dados localhost, só executar npm start/node server.js
