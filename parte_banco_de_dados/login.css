@@ -15,7 +15,7 @@ body {
     align-items: center;
 }
 
-/* Imagem de fundo */
+
 .background {
     position: fixed;
     width: 100%;
@@ -26,7 +26,7 @@ body {
     z-index: -2;
 }
 
-/* Escurece um pouco o fundo */
+
 body::before {
     content: "";
     position: fixed;
@@ -68,7 +68,7 @@ body::before {
     margin-top: 3px;
 }
 
-/* Caixa de Login */
+
 .login {
     width: 350px;
     background: rgba(255,255,255,.35);
@@ -78,7 +78,7 @@ body::before {
     padding: 30px;
 }
 
-/* Centraliza apenas os textos de dentro da caixa de login */
+
 .login h2, .login p {
     text-align: center;
     margin-bottom: 35px;
@@ -126,7 +126,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Link de cadastro */
+
 #cadastro {
     background-color: rgba(255,255,255,.35);
     border-radius: 12px;
