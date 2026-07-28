@@ -35,7 +35,7 @@ body::before {
     z-index: -1;
 }
 
-/* Barra superior */
+
 .topo {
     position: absolute;
     top: 10px;

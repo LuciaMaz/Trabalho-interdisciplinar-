@@ -1,1 +1,4 @@
 para ligar a conexão do site para o banco de dados localhost, só executar npm start/node server.js
+
+
+como o acesso aos portfólios será restrito optamos por retirar a página de login
