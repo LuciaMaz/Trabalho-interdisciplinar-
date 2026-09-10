@@ -153,3 +153,148 @@ header .navegation li a{
 .boxImg img{
   width: 300px;
 }
+
+
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 120px auto 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.board-card {
+    position: relative;
+    background-color: #a55c0a;
+    border-radius: 12px;
+    padding: 25px 20px 60px 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+.board-header {
+    text-align: center;
+    color: #0c0c0c;
+    margin-bottom: 25px;
+}
+
+.board-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.board-header h2 {
+    font-family: 'Black Ops One', cursive, sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+ */
+
+.grid-persons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+@media (max-width: 992px) {
+    .grid-persons { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 600px) {
+    .grid-persons { grid-template-columns: repeat(2, 1fr); }
+}
+
+.person-card {
+    background: #0d0c0f;
+    border-radius: 6px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.person-img {
+    width: 100%;
+    height: 90px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.person-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.person-info {
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.65rem;
+    line-height: 1.2;
+}
+
+.person-info strong {
+    display: block;
+    color: #a55c0a;
+    font-weight: bold;
+}
+
+.grid-subjects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+@media (max-width: 600px) {
+    .grid-subjects { grid-template-columns: 1fr; }
+}
+
+.subject-item {
+    background-color: #0d0c0f;
+    color: #a55c0a;
+    text-align: center;
+    padding: 12px 10px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.subject-item.full-width {
+    grid-column: span 2;
+}
+
+@media (max-width: 600px) {
+    .subject-item.full-width { grid-column: span 1; }
+}
+
+.board-badge {
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #0d0c0f;
+    border: 3px solid #a55c0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.board-badge img {
+    width: 70%;
+    height: auto;
+}
