@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+    max-width: 1200px;
+    margin: 0px;
+    padding: 0px;
+background-color: black;
+
+}
+img{
+    position: relative;
+    left: 60px;
+    right: 60px;
+    width: 250px;
+    height: 250px;
+}
+
+b{
+ color: #a55c0a;
+ font-size: 20px;
+ position: absolute;
+   
+ left: 170px;
+    right: 150px;
+}
+h1{
+    font-size: 60px;
+  font-family:"Black Ops One", system-ui;
+
+  font-weight: 400;
+  font-style: normal;
+    color: #a55c0a;
+    text-align: center;
+}
+
+h2{
+    position: relative;
+    left: 100px;
+    right: 100px;
+    font-size: 20px;
+    text-align:justify;
+color: rgb(166, 152, 145);
+font-family: 'Roboto', sans-serif;
+}
+section{
+    display: flex;
+}
+
+
+
+.linha-divisoria{
+    
+    color: #a55c0a;
+}
