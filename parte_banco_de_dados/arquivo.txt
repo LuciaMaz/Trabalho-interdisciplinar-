@@ -13,3 +13,6 @@ npm install
 npm start
 
 como o acesso aos portfólios será restrito optamos por retirar a página de login
+
+
+o banco de dados foi desenvolvido inteiramente por Wendel Alexandre da Silva, com ajuda do professor Eliel Soares de Lima.
