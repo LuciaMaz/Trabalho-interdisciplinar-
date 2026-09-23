@@ -6,8 +6,9 @@ document.getElementById('formLoginProfessor').addEventListener('submit', async (
 
     try {
         
-        const response = await fetch('http://localhost:3000/api/login-pedagogico', {
+        const response = await fetch('/api/login-pedagogico', {
             method: 'POST',
+            credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -22,7 +23,7 @@ document.getElementById('formLoginProfessor').addEventListener('submit', async (
         if (response.ok) {
             alert('Login pedagógico realizado com sucesso!');
             
-            window.location.href = 'portfólios.html'; 
+            window.location.replace(dados.redirect);
         } else {
             alert(dados.error || 'Erro ao fazer login.');
         }

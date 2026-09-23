@@ -7,8 +7,9 @@ document.getElementById('formLogin').addEventListener('submit', async (event) =>
 
     try {
         
-        const response = await fetch('http://localhost:3000/api/login', {
+        const response = await fetch('/api/login', {
             method: 'POST',
+            credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -23,7 +24,7 @@ document.getElementById('formLogin').addEventListener('submit', async (event) =>
         if (response.ok) {
             alert('Login realizado com sucesso!');
             
-            window.location.href = 'portfólios.html'; 
+            window.location.replace(dados.redirect);
         } else {
           
             alert(dados.error || 'Erro ao fazer login.');

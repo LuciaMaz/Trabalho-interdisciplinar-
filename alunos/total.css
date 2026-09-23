@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --fundo: #0d0c0f;
+    --fundo-card: #18171b;
+    --laranja: #a55c0a;
+    --laranja-claro: #c9701f;
+    --texto: #ffffff;
+    --texto-suave: #cfcfcf;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top right, rgba(165, 92, 10, 0.28), transparent 34rem),
+        var(--fundo);
+    color: var(--texto);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr) auto;
+    grid-template-areas:
+        "logo titulo sair"
+        "logo colegio sair";
+    align-items: center;
+    gap: 6px 28px;
+    padding: 28px max(24px, calc((100% - 1280px) / 2));
+    background: rgba(13, 12, 15, 0.92);
+    border-bottom: 2px solid var(--laranja);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    right: -100px;
+    bottom: -260px;
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    background: var(--laranja);
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+header h1 {
+    grid-area: titulo;
+    position: relative;
+    z-index: 1;
+    font-family: 'Black Ops One', system-ui;
+    font-size: clamp(26px, 4vw, 46px);
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 1px;
+}
+
+header h1::first-letter {
+    color: var(--laranja);
+}
+
+header .logo {
+    grid-area: logo;
+    position: relative;
+    z-index: 1;
+    width: 125px;
+    height: 125px;
+    object-fit: contain;
+}
+
+header p {
+    grid-area: colegio;
+    position: relative;
+    z-index: 1;
+    color: var(--texto-suave);
+    font-size: 18px;
+    letter-spacing: 0.7px;
+}
+
+.logout-pedagogico {
+    grid-area: sair;
+    position: relative;
+    z-index: 1;
+    min-width: 110px;
+    padding: 11px 22px;
+    border: 1px solid var(--laranja-claro);
+    border-radius: 40px;
+    background: transparent;
+    color: var(--texto);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.logout-pedagogico:hover:not(:disabled) {
+    transform: translateY(-2px);
+    background: var(--laranja);
+}
+
+.logout-pedagogico:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}
+
+.alunos-container {
+    width: min(1280px, calc(100% - 40px));
+    margin: 48px auto 70px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.aluno-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 390px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
+    border: 1px solid rgba(165, 92, 10, 0.75);
+    border-radius: 18px;
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aluno-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--laranja);
+}
+
+.aluno-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--laranja-claro);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.42);
+}
+
+.aluno-foto {
+    width: 145px;
+    height: 175px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    object-position: center;
+    background: #09090b;
+    border: 3px solid var(--laranja);
+    border-radius: 14px;
+}
+
+.aluno-card h2 {
+    margin-bottom: 10px;
+    font-family: 'Black Ops One', system-ui;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--texto);
+}
+
+.aluno-card p {
+    flex: 1;
+    margin-bottom: 20px;
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+.aluno-card button {
+    width: 100%;
+    padding: 11px 18px;
+    border: 1px solid var(--laranja);
+    border-radius: 40px;
+    background: var(--laranja);
+    color: var(--texto);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.aluno-card button:hover {
+    transform: translateY(-3px);
+    background: transparent;
+    color: var(--laranja-claro);
+}
+
+.aluno-card button:focus-visible {
+    outline: 3px solid var(--texto);
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    header {
+        grid-template-columns: 90px minmax(0, 1fr);
+        grid-template-areas:
+            "logo titulo"
+            "logo colegio"
+            "sair sair";
+        gap: 4px 16px;
+        padding: 22px 20px;
+    }
+
+    header .logo {
+        width: 85px;
+        height: 85px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .logout-pedagogico {
+        width: 100%;
+        margin-top: 14px;
+    }
+
+    .alunos-container {
+        width: min(100% - 28px, 520px);
+        margin-top: 30px;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .aluno-card {
+        min-height: 360px;
+    }
+}

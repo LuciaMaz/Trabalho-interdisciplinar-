@@ -1,5 +1,8 @@
-para ligar a conexão do site para o banco de dados localhost, só executar 
-npm start/node server.js
+Para ligar o site ao banco MySQL local:
+
+1. Inicie o MySQL (o Workbench sozinho é apenas o programa de administração).
+2. Execute database.sql no schema portfolios e configure a coluna Portfolio de cada aluno.
+3. Inicie o servidor por uma das formas abaixo.
 
 cd parte_banco_de_dados
 npm start
@@ -12,7 +15,10 @@ cd parte_banco_de_dados
 npm install
 npm start
 
-como o acesso aos portfólios será restrito optamos por retirar a página de login
+Abra o site por http://localhost:3000/. Não abra os HTMLs por file:// nem por outro
+Live Server, porque a autorização dos portfólios é feita pelo servidor da porta 3000.
+
+As páginas de login de aluno e pedagógico criam sessões protegidas no servidor.
 
 
 o banco de dados foi desenvolvido inteiramente por Wendel Alexandre da Silva, com ajuda do professor Eliel Soares de Lima.

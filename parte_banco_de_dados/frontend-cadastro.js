@@ -3,17 +3,20 @@ document.getElementById('formCadastro').addEventListener('submit', async (event)
 
     const usuarioInput = document.getElementById('usuario').value;
     const senhaInput = document.getElementById('senha').value;
+    const portfolioInput = document.getElementById('portfolio').value;
 
     try {
         
-        const response = await fetch('http://localhost:3000/api/cadastro', {
+        const response = await fetch('/api/cadastro', {
             method: 'POST',
+            credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 login: usuarioInput,
-                senha: senhaInput
+                senha: senhaInput,
+                portfolio: portfolioInput
             })
         });
 

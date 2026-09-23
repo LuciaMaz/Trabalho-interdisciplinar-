@@ -6,8 +6,9 @@ document.getElementById('formCadastroPedagogico').addEventListener('submit', asy
 
     try {
         
-        const response = await fetch('http://localhost:3000/api/cadastro-pedagogico', {
+        const response = await fetch('/api/cadastro-pedagogico', {
             method: 'POST',
+            credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json'
             },
