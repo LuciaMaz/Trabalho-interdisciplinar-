@@ -547,7 +547,7 @@ header .navegation li a:hover{
 .pessoa .foto{
    width: 100%;
    aspect-ratio: 3 / 4;
-   background: ;
+   background: #0d0c0f;
    border: 4px solid #0d0c0f;
    border-radius: 10px;
    display: flex;
