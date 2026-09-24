@@ -7,31 +7,33 @@
     <link rel="stylesheet" href="banco-style.css">
 </head>
 <body>
-    <div class="container">
+    <img
+        src="../banco_de_imagens/frentedaescola.jpg"
+        alt="Fachada do Colégio Estadual Alberto de Carvalho"
+        class="background"
+    >
+
+    <main class="container">
         <img src="imagem logo alberto.png" alt="Logo" class="logo">
         <h1>Acesso aos portfólios</h1>
         <p class="texto">
             Os portfólios possuem acesso restrito por decisão da turma
         </p>
-       
-        <h2>Por Favor, selecione seu perfil:</h2>
+
+        <h2>Por favor, selecione seu perfil:</h2>
         <div class="opcoes">
-            <div class="card">
-                <a href="login_estudante.html">
+            <a class="card" href="login_estudante.html">
                 <img src="icone estudante.jpg" alt="Aluno">
-                <a href="login_estudante.html">Acesso Aluno</a>
-                </a>
-            </div>
-            <div class="card">
-                <a href="login_professor.html">
+                <span>Acesso Aluno</span>
+            </a>
+
+            <a class="card" href="login_professor.html">
                 <img src="icone professor.jpg" alt="Professor">
-                <a href="login_professor.html">Acesso Pedagógico</a>
-                </a>
-            </div>
+                <span>Acesso Pedagógico</span>
+            </a>
         </div>
-        <button><a href="../index.html">Voltar</a></button>
 
-    </div>
-
+        <a class="voltar" href="../index.html">Voltar</a>
+    </main>
 </body>
 </html>
