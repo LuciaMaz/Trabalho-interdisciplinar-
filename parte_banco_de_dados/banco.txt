@@ -1,0 +1,104 @@
+  ### 1. Adicionar somente um aluno
+
+  Primeiro, o HTML precisa existir em alunos/. Exemplo: se o arquivo for joao.html, o portfólio deve
+  ser joao, sem .html.
+
+  USE portfolios;
+
+  INSERT INTO loginAlunos (Login, Senha, Portfolio)
+  SELECT
+      'joao.silva@escola.pr.gov.br',
+      'senha_do_joao',
+      'joao'
+  WHERE NOT EXISTS (
+      SELECT 1
+      FROM loginAlunos
+      WHERE Login = 'joao.silva@escola.pr.gov.br'
+  );
+
+  SELECT ID, Login, Portfolio
+  FROM loginAlunos
+  WHERE Login = 'joao.silva@escola.pr.gov.br';
+
+  Ao entrar pelo login de aluno, ele terá acesso somente a:
+
+  /alunos/joao.html
+
+  ### 2. Adicionar somente um pedagógico
+
+  Para uma pessoa que não possui conta de aluno:
+
+  USE portfolios;
+
+  INSERT INTO loginPedagogico (Login, Senha)
+  SELECT
+      'professor.nome@escola.pr.gov.br',
+      'senha_do_professor'
+  WHERE NOT EXISTS (
+      SELECT 1
+      FROM loginPedagogico
+      WHERE Login = 'professor.nome@escola.pr.gov.br'
+  );
+
+  SELECT ID, Login
+  FROM loginPedagogico
+  WHERE Login = 'professor.nome@escola.pr.gov.br';
+
+  Essa conta entra pela tela de login pedagógico e pode abrir todos os portfólios.
+
+  ### 3. Dar acesso pedagógico para alguém que já é aluno
+
+  Esse é o caso do Wendel. O comando copia o login e a senha da conta de aluno:
+
+  USE portfolios;
+
+  INSERT INTO loginPedagogico (Login, Senha)
+  SELECT aluno.Login, aluno.Senha
+  FROM loginAlunos AS aluno
+  WHERE aluno.Login = 'joao.silva@escola.pr.gov.br'
+    AND NOT EXISTS (
+        SELECT 1
+        FROM loginPedagogico
+        WHERE Login = aluno.Login
+    );
+
+  SELECT ID, Login
+  FROM loginPedagogico
+  WHERE Login = 'joao.silva@escola.pr.gov.br';
+
+  A pessoa então poderá usar:
+
+  - Tela de aluno: abre apenas o próprio portfólio.
+  - Tela pedagógica: abre a lista completa.
+  - A senha será a mesma nas duas telas.
+
+  ### 4. Alterar o portfólio de um aluno
+
+  Primeiro consulte o ID:
+
+  SELECT ID, Login, Portfolio
+  FROM loginAlunos
+  WHERE Login = 'joao.silva@escola.pr.gov.br';
+
+  Depois use o ID retornado:
+
+  UPDATE loginAlunos
+  SET Portfolio = 'joao'
+  WHERE ID = 25;
+
+  Usar o ID evita o erro do Safe Update Mode.
+
+  ### 5. Remover acesso pedagógico sem apagar o aluno
+
+  Primeiro consulte o ID pedagógico:
+
+  SELECT ID, Login
+  FROM loginPedagogico
+  WHERE Login = 'joao.silva@escola.pr.gov.br';
+
+  Depois remova usando o ID retornado:
+
+  DELETE FROM loginPedagogico
+  WHERE ID = 8;
+
+  Isso remove somente o acesso pedagógico. A conta de aluno e o portfólio permanecem funcionando.
