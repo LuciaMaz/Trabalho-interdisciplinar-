@@ -81,6 +81,44 @@ body {
   font-size: 15px;
 }
 
+
+.bio-section2 h3 {
+  color: #f74f20;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bio-box2 {
+  background-color: #252932;
+  border: 1px solid #f74f20;
+  border-radius: 12px;
+  padding: 15px 20px;
+  color: #e0e0e0;
+  font-size: 15px;
+
+}
+
+.bio-section3 h3 {
+  color: #f74f20;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.bio-box3 {
+  background-color: #252932;
+  border: 1px solid #f74f20;
+  border-radius: 12px;
+  padding: 15px 20px;
+  color: #e0e0e0;
+  font-size: 15px;
+
+}
+
+.links {
+  color: #f74f20;
+  text-decoration: underline;
+}
+
 .portfolio-voltar {
   width: 100%;
   margin-top: 24px;
